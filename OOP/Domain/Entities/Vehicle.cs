@@ -4,7 +4,7 @@ namespace OOP.Domain.Entities
 {
     public class Vehicle
     {
-        public Guid VehicleId { get; }
+        public Guid Id { get; }
         // Biển số xe (định danh vật lý của phương tiện)
         public string Plate { get; }
         public VehicleType Type { get; }
@@ -14,7 +14,7 @@ namespace OOP.Domain.Entities
         public int Seats { get; }
         public Vehicle(string plate, VehicleType type, string brand, string model, string color, int seats)
         {
-            VehicleId = Guid.NewGuid();
+            Id = Guid.NewGuid();
             Plate = plate;
             Type = type;
             Brand = brand;

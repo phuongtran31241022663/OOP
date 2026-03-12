@@ -1,16 +1,16 @@
 ﻿using OOP.Domain.Entities;
 using OOP.Domain.Interfaces;
-using static OOP.Domain.Enums;
+using OOP.Domain.Enums;
 
 namespace OOP.Application.Services
 {
     public class FareService
     {
-        private readonly IFareRuleRepo Repo;
+        private readonly IFareRuleRepo repo;
 
-        public FareService(IFareRuleRepo Repo)
+        public FareService(IFareRuleRepo repo)
         {
-            this.Repo = Repo ?? throw new ArgumentNullException(nameof(Repo));
+            this.repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
 
       

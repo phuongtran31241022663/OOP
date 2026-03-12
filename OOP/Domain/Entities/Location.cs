@@ -20,7 +20,7 @@
                 throw new ArgumentException("Địa chỉ không được để trống.");
 
             // Kiểm tra tính hợp lệ của tọa độ thực tế
-            if (Lat < -90 || Lat > 90)
+            if (lat < -90 || lat > 90)
                 throw new ArgumentOutOfRangeException(nameof(Lat), "Vĩ độ phải từ -90 đến 90.");
 
             if (lng < -180 || lng > 180)

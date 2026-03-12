@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using static OOP.Domain.Enums;
+﻿using static OOP.Domain.Enums;
 
 namespace OOP.Domain.Entities
 {

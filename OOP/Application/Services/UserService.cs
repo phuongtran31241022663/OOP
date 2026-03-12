@@ -1,18 +1,13 @@
-﻿using OOP.Domain;
-using OOP.Domain.Entities;
-using OOP.Domain.Interfaces;
-using System.Security.Cryptography;
-using System.Text;
+﻿using OOP.Domain.Interfaces;
 
 namespace OOP.Application.Services
 {
     public class UserService
     {
-        private readonly IUserRepo Repo;
-        public UserService(IUserRepo userRepo)
+        private readonly IUserRepo repo;
+        public UserService(IUserRepo repo)
         {
-            Repo = userRepo ?? throw new ArgumentNullException(nameof(userRepo));
+            this.repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
-       
     }
 }

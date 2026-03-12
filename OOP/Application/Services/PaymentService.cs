@@ -1,10 +1,6 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using OOP.Domain.Entities;
+﻿using OOP.Domain.Entities;
 using OOP.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using static OOP.Domain.Enums;
+using OOP.Domain.Enums;
 
 namespace OOP.Application.Services
 {

@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography;
-using static OOP.Domain.Enums;
+﻿using static OOP.Domain.Enums;
 
 namespace OOP.Domain.Entities
 {
@@ -7,14 +6,16 @@ namespace OOP.Domain.Entities
     {
         public Location Position { get; private set; }
         public Passenger(
-            Guid Id,
-            string name,
-            string phone,
-            string hashedPassword,
-            bool isActive)
-            : base(Id, name, phone, hashedPassword, isActive, UserRole.Passenger)
+    Guid id,
+    string name,
+    string phone,
+    string hashedPassword,
+    bool isActive,
+    Location position)
+    : base(id, name, phone, hashedPassword, isActive, UserRole.Passenger)
         {
+            Position = position;
         }
-        
+
     }
 }

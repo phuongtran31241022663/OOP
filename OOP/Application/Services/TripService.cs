@@ -1,6 +1,6 @@
 ﻿using OOP.Domain.Entities;
 using OOP.Domain.Interfaces;
-using static OOP.Domain.Enums;
+using OOP.Domain.Enums;
 
 namespace OOP.Application.Services
 {

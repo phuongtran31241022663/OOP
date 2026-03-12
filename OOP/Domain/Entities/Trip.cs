@@ -5,7 +5,7 @@ namespace OOP.Domain.Entities
     public class Trip
     {
         // 1. Các thông tin định danh
-        public Guid TripId { get; init; }
+        public Guid Id { get; init; }
         public Guid PassengerId { get; init; }
         public Guid? DriverId { get; private set; }
         public TripStatus Status { get; private set; }
@@ -19,7 +19,6 @@ namespace OOP.Domain.Entities
         // 3. Thời gian và lý do (nếu có)
         public DateTime CreatedAt { get; init; }
         public string? Reason { get; private set; }
-        public TimeSpan Duration { get; }
         public Trip(
             Guid passengerId,
             Location pickup,
@@ -31,7 +30,7 @@ namespace OOP.Domain.Entities
             if (distance <= 0) throw new ArgumentException("Distance must be > 0");
             if (fare <= 0) throw new ArgumentException("Fare must be > 0");
 
-            TripId = Guid.NewGuid();
+            Id = Guid.NewGuid();
             PassengerId = passengerId;
             Pickup = pickup ?? throw new ArgumentNullException(nameof(pickup));
             Dropoff = dropoff ?? throw new ArgumentNullException(nameof(dropoff));
