@@ -4,10 +4,10 @@ namespace OOP.Application.Services
 {
     public class MatchService
     {
-        private readonly IUserRepo userRepo;
-        private readonly ITripRepo tripRepo;
+        private readonly IUserRepository userRepo;
+        private readonly ITripRepository tripRepo;
 
-        public MatchService(IUserRepo userRepo, ITripRepo tripRepo)
+        public MatchService(IUserRepository userRepo, ITripRepository tripRepo)
         {
             this.userRepo = userRepo ?? throw new ArgumentNullException(nameof(userRepo));
             this.tripRepo = tripRepo ?? throw new ArgumentNullException(nameof(tripRepo));

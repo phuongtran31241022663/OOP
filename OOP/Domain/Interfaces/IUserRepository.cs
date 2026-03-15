@@ -2,7 +2,7 @@
 
 namespace OOP.Domain.Interfaces
 {
-    public interface IUserRepo
+    public interface IUserRepository
     {
         Task<User?> GetById(Guid id);
         Task<User?> GetByPhone(string phone);

@@ -2,7 +2,7 @@
 
 namespace OOP.Domain.Interfaces
 {
-    public interface ITripRepo
+    public interface ITripRepository
     {
         Task<Trip?> GetById(Guid id);
         Task<List<Trip>> GetByPassengerId(Guid Id);

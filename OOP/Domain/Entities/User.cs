@@ -1,12 +1,11 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
-using static OOP.Domain.Enums;
+using OOP.Domain.Enums;
 
 namespace OOP.Domain.Entities
 {
     public abstract class User
     {
-        // init chỉ gán khi khởi tạo object
         public Guid Id { get; init; }
         // Thông tin cá nhân
         public string Name { get; init; }

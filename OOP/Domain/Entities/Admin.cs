@@ -1,4 +1,4 @@
-﻿using static OOP.Domain.Enums;
+﻿using OOP.Domain.Enums;
 
 namespace OOP.Domain.Entities
 {

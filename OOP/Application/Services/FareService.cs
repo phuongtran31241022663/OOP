@@ -6,9 +6,9 @@ namespace OOP.Application.Services
 {
     public class FareService
     {
-        private readonly IFareRuleRepo repo;
+        private readonly IFareRepository repo;
 
-        public FareService(IFareRuleRepo repo)
+        public FareService(IFareRepository repo)
         {
             this.repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }

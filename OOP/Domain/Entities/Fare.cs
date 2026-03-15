@@ -1,15 +1,15 @@
-﻿using static OOP.Domain.Enums;
+﻿using OOP.Domain.Enums;
 
 namespace OOP.Domain.Entities
 {
-    public class FareRule
+    public abstract class Fare
     {
         public VehicleType Type { get; init; }
         public decimal BaseFare { get; init; }
         public decimal PricePerKm { get; init; }
         public decimal CommissionRate { get; init; }
 
-        public FareRule(
+        public Fare(
             VehicleType type,
             decimal baseFare,
             decimal pricePerKm,
@@ -26,6 +26,27 @@ namespace OOP.Domain.Entities
             PricePerKm = pricePerKm;
             CommissionRate = commissionRate;
         }
-       
+        public abstract decimal CalculateFare(double distanceKm);
+    }
+    public class MotorbikeFare : Fare
+    {
+        public MotorbikeFare()
+            : base(VehicleType.Motorbike, 8000, 3500, 0.2m) { }
+
+        public override decimal CalculateFare(double distanceKm)
+        {
+            return BaseFare + (decimal)distanceKm * PricePerKm;
+        }
+    }
+
+    public class CarFare : Fare
+    {
+        public CarFare()
+            : base(VehicleType.Car, 15000, 12000, 0.25m) { }
+
+        public override decimal CalculateFare(double distanceKm)
+        {
+            return BaseFare + (decimal)distanceKm * PricePerKm;
+        }
     }
 }

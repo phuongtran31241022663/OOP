@@ -6,11 +6,11 @@ namespace OOP.Application.Services
 {
     public class ReviewService
     {
-        private readonly IReviewRepo reviewRepo;
-        private readonly IUserRepo userRepo;
-        private readonly ITripRepo tripRepo;
+        private readonly IReviewRepository reviewRepo;
+        private readonly IUserRepository userRepo;
+        private readonly ITripRepository tripRepo;
 
-        public ReviewService(IReviewRepo reviewRepo, IUserRepo userRepo, ITripRepo tripRepo)
+        public ReviewService(IReviewRepository reviewRepo, IUserRepository userRepo, ITripRepository tripRepo)
         {
             ArgumentNullException.ThrowIfNull(reviewRepo);
             ArgumentNullException.ThrowIfNull(userRepo);

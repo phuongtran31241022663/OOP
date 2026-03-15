@@ -6,10 +6,10 @@ namespace OOP.Application.Services
 {
     public class PaymentService
     {
-        private readonly ITripRepo trips;
-        private readonly IFareRuleRepo fares;
-        private readonly IUserRepo users;
-        public PaymentService(ITripRepo trips, IFareRuleRepo fares, IUserRepo users)
+        private readonly ITripRepository trips;
+        private readonly IFareRepository fares;
+        private readonly IUserRepository users;
+        public PaymentService(ITripRepository trips, IFareRepository fares, IUserRepository users)
         {
             this.trips = trips ?? throw new ArgumentNullException(nameof(trips));
             this.fares = fares ?? throw new ArgumentNullException(nameof(fares));

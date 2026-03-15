@@ -2,7 +2,7 @@
 
 namespace OOP.Domain.Interfaces
 {
-    public interface IReviewRepo
+    public interface IReviewRepository
     {
         Task<Review> GetById(Guid id);
         Task<List<Review>> GetByDriverId(Guid driverId);

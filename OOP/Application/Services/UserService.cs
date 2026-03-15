@@ -4,8 +4,8 @@ namespace OOP.Application.Services
 {
     public class UserService
     {
-        private readonly IUserRepo repo;
-        public UserService(IUserRepo repo)
+        private readonly IUserRepository repo;
+        public UserService(IUserRepository repo)
         {
             this.repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
