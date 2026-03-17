@@ -7,6 +7,10 @@ namespace OOP.Domain.Entities
         private int tripId;
         private string startLocation;
         private string endLocation;
+        private Driver driver;
+        private Passenger passenger;
+        private Vehicle vehicle;
+        private Payment payment;
 
         public int GetTripId()
         {

@@ -46,5 +46,9 @@
         {
             totalFare = value;
         }
+        public double Calculate(Vehicle vehicle)
+        {
+            return 0;
+        }
     }
 }
