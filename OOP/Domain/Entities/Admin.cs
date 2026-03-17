@@ -2,17 +2,18 @@
 
 namespace OOP.Domain.Entities
 {
-    public class Admin : User
+    public class Admin : Users
     {
-        public Admin(
-            Guid Id,
-            string name,
-            string phone,
-            string hashedPassword,
-            bool isActive)
-            : base(Id, name, phone, hashedPassword, isActive, UserRole.Admin)
+        private string role;
+
+        public string GetRole()
         {
+            return role;
         }
-      
+
+        public void SetRole(string value)
+        {
+            role = value;
+        }
     }
 }

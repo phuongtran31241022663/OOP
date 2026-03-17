@@ -4,26 +4,40 @@ using OOP.Domain.Enums;
 
 namespace OOP.Domain.Entities
 {
-    public abstract class User
+    public class Users
     {
-        public Guid Id { get; init; }
-        // Thông tin cá nhân
-        public string Name { get; init; }
-        public string Phone { get; init; }
-        // Mật khẩu
-        public string Password { get; protected set; }
-        // Trạng thái tài khoản
-        public bool IsActive { get; protected set; } = true;
-        // Vai trò
-        public UserRole Role { get; init; }
-        protected User(Guid id, string name, string phone, string hashedPassword, bool isActive, UserRole role)
+        private int id;
+        private string name;
+        private string phone;
+
+        public int GetId()
         {
-            Id = id;
-            Name = name;
-            Phone = phone;
-            Password = hashedPassword;
-            IsActive = isActive;
-            Role = role;
+            return id;
+        }
+
+        public void SetId(int value)
+        {
+            id = value;
+        }
+
+        public string GetName()
+        {
+            return name;
+        }
+
+        public void SetName(string value)
+        {
+            name = value;
+        }
+
+        public string GetPhone()
+        {
+            return phone;
+        }
+
+        public void SetPhone(string value)
+        {
+            phone = value;
         }
     }
 }
